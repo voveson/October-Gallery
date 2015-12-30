@@ -1,0 +1,20 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    file:
+        label: Image
+        type: fileupload
+        mode: image
+        imageWidth: 200
+        imageHeight: 200
+
+    title:
+        label: Title
+
+    content:
+        label: Content
+        type: markdown
+        size: small

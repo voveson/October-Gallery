@@ -1,0 +1,21 @@
+<p>
+    <button class="btn btn-primary"><i class="icon-plus"></i> Add Image</button>
+</p>
+<?php foreach($model->images as $image): ?>
+<div class="add-img-thumb">
+    <div class="actions">
+        <a class="edit-trigger" data-id="<?= $image->id; ?>" href="#"><i class="icon-edit"></i></a>
+        <a class="move-handle" href="#"><i class="icon-arrows"></i></a>
+    </div>
+
+    <img src="<?= $image->file->getThumb(100, 200); ?>"/><br>
+    <h4><a href="#"><?= $image->title ?></a></h4>
+</div>
+<?php endforeach ?>
+<div class="control-popup modal fade" id="img-edit-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <iframe src="about:blank" id="img-edit-frame"></iframe>
+        </div>
+    </div>
+</div>

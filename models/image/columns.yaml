@@ -1,0 +1,23 @@
+# ===================================
+#  List Column Definitions (Image model)
+# ===================================
+
+defaultSort:
+    column: display_order
+    direction: asc
+
+columns:
+
+    thumb:
+        type: partial
+        label: Preview
+        sortable: false
+        path: $/aspendigital/imagegallery/controllers/images/_preview_image.htm
+
+    title:
+        label: Title
+        sortable: false
+
+    display_order:
+            label: Display Order
+            sortable: true

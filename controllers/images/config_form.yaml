@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Image
+
+# Model Form Field configuration
+form: $/aspendigital/imagegallery/models/image/fields.yaml
+
+# Model Class name
+modelClass: AspenDigital\ImageGallery\Models\Image
+
+# Default redirect location
+defaultRedirect: aspendigital/imagegallery/images
+
+# Create page
+create:
+    title: Create Image
+    redirect: aspendigital/imagegallery/images/update/:id
+    redirectClose: 'about:blank' #aspendigital/imagegallery/images
+
+# Update page
+update:
+    title: Edit Image
+    redirect: 'about:blank' #aspendigital/imagegallery/images
+    redirectClose: 'about:blank' #aspendigital/imagegallery/images
+
+# Preview page
+preview:
+    title: Preview Image

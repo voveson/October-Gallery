@@ -1,0 +1,4 @@
+1.0.1:
+  - Initialize plugin.
+  - create_galleries_table.php
+  - create_images_table.php

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Gallery
+
+# Model Form Field configuration
+form: $/aspendigital/imagegallery/models/gallery/fields.yaml
+
+# Model Class name
+modelClass: AspenDigital\ImageGallery\Models\Gallery
+
+# Default redirect location
+defaultRedirect: aspendigital/imagegallery/galleries
+
+# Create page
+create:
+    title: Create Gallery
+    redirect: aspendigital/imagegallery/galleries/update/:id
+    redirectClose: aspendigital/imagegallery/galleries
+
+# Update page
+update:
+    title: Edit Gallery
+    redirect: aspendigital/imagegallery/galleries
+    redirectClose: aspendigital/imagegallery/galleries
+
+# Preview page
+preview:
+    title: Preview Gallery

@@ -1,0 +1,23 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    title:
+        label: Title
+        span: left
+        placeholder: Gallery Title
+
+    slug:
+        label: Slug
+        span: right
+        placeholder: Slug
+        preset:
+            field: title
+            type: slug
+
+#    images:
+#        label: Images
+#        type: partial
+#        path: $/aspendigital/imagegallery/models/image/_image_field.htm

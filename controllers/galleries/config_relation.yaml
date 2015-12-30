@@ -1,0 +1,19 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+images:
+    label: Image
+    emptyMessage: There are no Images in this Gallery
+    view:
+        list: $/aspendigital/imagegallery/models/image/columns.yaml
+        toolbarButtons: create|delete
+        defaultSort:
+            column: display_order
+            direction: asc
+    manage:
+        form: $/aspendigital/imagegallery/models/image/fields.yaml
+        recordsPerPage: 10
+        defaultSort:
+            column: display_order
+            direction: asc
