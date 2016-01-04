@@ -32,7 +32,10 @@ class Gallery extends Model
      * @var array Relations
      */
     public $hasMany = [
-        'images'    =>  'AspenDigital\ImageGallery\Models\Image'
+        'images'    =>  [
+            'AspenDigital\ImageGallery\Models\Image',
+            'order' => 'display_order asc'
+        ]
     ];
 
     /*

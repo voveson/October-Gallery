@@ -5,7 +5,7 @@ A plugin for creating and managing image galleries, written for [october cms](ht
 ###To Do
 - [ ] __Back End__
     - [X] Image Model `beforeSave()` function:  populate `display_order` and `content_html` fields
-    - [ ] Gallery Model:  serialize `Images` in their proper display order
+    - [X] Gallery Model:  serialize `Images` in their proper display order
     - [ ] Create a partial for the Image relationship manager toolbar with a button to save reordering
     - [ ] Image reordering ajax handler (persist display order to the database)
     - [ ] Mark the "Galleries" menu item as `active` when on Galleries pages
