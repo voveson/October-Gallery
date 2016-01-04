@@ -34,7 +34,7 @@ function initImageTable()
     table.find('tr').each(function(){
         row = $(this);
 
-        if(row.not('.no-data'))
+        if(!row.is('.no-data'))
         {
             td = row.find('td').first();
             td.append('<br><i class="icon-sort sort-handle"></i>');

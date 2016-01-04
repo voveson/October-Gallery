@@ -1,6 +1,7 @@
 <?php namespace AspenDigital\ImageGallery\Models;
 
 use Model;
+use October\Rain\Support\Facades\Markdown;
 
 /**
  * Image Model
@@ -34,6 +35,14 @@ class Image extends Model
     public $belongsTo = [
         'gallery'   =>  'AspenDigital\ImageGallery\Models\Gallery'
     ];
+
+    public function beforeSave()
+    {
+        $count = count($this->gallery->images);
+
+        $this->display_order = $count + 1;
+        $this->content_html = Markdown::parse($this->content);
+    }
 
     /*
     public $hasOne = [];
