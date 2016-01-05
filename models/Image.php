@@ -38,7 +38,10 @@ class Image extends Model
 
     public function beforeSave()
     {
-        $count = count($this->gallery->images);
+        if ($this->gallery)
+            $count = count($this->gallery->images);
+        else
+            $count = 0;
 
         $this->display_order = $count + 1;
         $this->content_html = Markdown::parse($this->content);

@@ -2,6 +2,7 @@
  * Created by Vince on 12/28/2015.
  */
 var imageSortableElement;
+var saveOrderBtnShown = false;
 
 $(function(){
     initImageTable();
@@ -29,9 +30,20 @@ function initImageTable()
 
     // Set up sortable table rows
     var images_div = $('#Galleries-update-RelationController-images-view');
+
+    if (!images_div.length)
+        images_div = $('#Galleries-create-RelationController-images-view');
+
     var table = images_div.find('table');
 
-    table.find('tr').each(function(){
+    table.find('thead tr').each(function() {
+        row = $(this);
+
+        th = row.find('.list-cell-name-display_order');
+        th.css('display', 'none');
+    });
+
+    table.find('tbody tr').each(function(){
         row = $(this);
 
         if(!row.is('.no-data'))
@@ -44,8 +56,6 @@ function initImageTable()
             // Hide the 'display order' column
             td = row.find('td').last();
             td.css('display', 'none');
-            th = row.find('th').last();
-            th.css('display', 'none');
         }
     });
 
@@ -88,4 +98,14 @@ function onImageSortUpdate(e, ui)
 
     console.log('serialized', serialized);
     console.log('trimmed', trimmed);
+
+    /*
+    if (!saveOrderBtnShown)
+    {
+        tb = $('#Galleries-update-RelationController-images-toolbar').find('div[data-control="toolbar"]');
+        tb.append('<a class="btn btn-default btn-sm">Save Reordering</a>');
+        console.log('hook');
+        saveOrderBtnShown = true;
+    }
+    */
 }

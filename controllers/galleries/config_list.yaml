@@ -15,7 +15,7 @@ title: Manage Galleries
 recordUrl: aspendigital/imagegallery/galleries/update/:id
 
 # Message to display if the list is empty
-noRecordsMessage: backend::lang.list.no_records
+noRecordsMessage: There are no Galleries to Display
 
 # Records to display per page
 recordsPerPage: 20

@@ -1,0 +1,5 @@
+{
+    "require": {
+        "owl/list-delete": "~1.0@dev"
+    }
+}

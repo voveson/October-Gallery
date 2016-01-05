@@ -17,3 +17,4 @@ images:
         defaultSort:
             column: display_order
             direction: asc
+    deferredBinding: true

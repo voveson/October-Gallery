@@ -38,16 +38,6 @@ class Gallery extends Model
         ]
     ];
 
-    /*
-    public $belongsTo = [];
-    public $belongsToMany = [];
-    public $morphTo = [];
-    public $morphOne = [];
-    public $morphMany = [];
-    public $attachOne = [];
-    public $attachMany = [];
-    */
-
     public function getImageCountAttribute()
     {
         return count($this->images);

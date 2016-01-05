@@ -14,7 +14,7 @@ class CreateImagesTable extends Migration
 
             // Columns
             $table->increments('id');
-            $table->integer('gallery_id')->unsigned();
+            $table->integer('gallery_id')->unsigned()->nullable();
             $table->integer('display_order');
             $table->string('title')->nullable();
             $table->text('content')->nullable();
@@ -22,7 +22,6 @@ class CreateImagesTable extends Migration
             $table->timestamps();
 
             // Indices & Keys
-            $table->unique(['gallery_id', 'display_order']);
             $table->foreign('gallery_id')
                   ->references('id')
                   ->on('aspendigital_imagegallery_galleries')

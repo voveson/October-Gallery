@@ -1,4 +1,5 @@
 <div class="scoreboard">
-    <h3><?= $galleriesTotal ?> Image Galleries</h3>
+    <h3><?= $galleriesTotal ?> Image <?= $galleriesTotal == 1 ? 'Gallery' : 'Galleries' ?></h3>
 </div>
+
 <?= $this->listRender() ?>

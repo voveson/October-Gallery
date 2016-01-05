@@ -12,7 +12,8 @@ class Galleries extends Controller
     public $implement = [
         'Backend.Behaviors.FormController',
         'Backend.Behaviors.ListController',
-        'Backend.Behaviors.RelationController'
+        'Backend.Behaviors.RelationController',
+        'Owl.Behaviors.ListDelete.Behavior'
     ];
 
     public $formConfig = 'config_form.yaml';
